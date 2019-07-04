@@ -102,15 +102,10 @@ def svm_loss_vectorized(W, X, y, reg):
     # loss.                                                                     #
     #############################################################################
     # *****START OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
-    margin[margin>0] = 1
-    part1 = np.matmul(X.T, margin)
-    
+    margin[margin>0] = 1   
     positive_margin_counts = np.sum(margin,axis=1)
-    multiplier = np.zeros(shape=margin.shape)
-    multiplier[np.arange(num_train),y] = -1*positive_margin_counts
-    part2 = np.matmul(X.T, multiplier)
-    
-    dW=part1+part2
+    margin[np.arange(num_train),y] = -1*positive_margin_counts
+    dW = np.matmul(X.T, margin)
     dW /= num_train 
     dW += 2 * reg * W
     

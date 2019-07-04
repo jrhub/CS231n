@@ -1,7 +1,7 @@
 # CS231n study group
 Assignments for CS231n: Convolutional Neural Networks for Visual Recognition
 Spring 2019
-[(syllabus))](http://cs231n.stanford.edu/syllabus.html)
+[(syllabus)](http://cs231n.stanford.edu/syllabus.html)
 
 ### Assignment 1 [(link)](http://cs231n.github.io/assignments2019/assignment1/)
   - Q1: k-Nearest Neighbor classifier. (_in progress_)
